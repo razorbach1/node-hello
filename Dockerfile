@@ -1,8 +1,9 @@
 From node:10
+ARG DEVOPS-LEVEL 
 MAINTAINER Raz O
 WORKDIR /usr/app
 COPY . .
-RUN npm install
+RUN npm install & echo "$DEVOPS-LEVEL"
 ENV ENVIROMENT production
-ARG DEVOPS-LEVEL hard
-CMD ["node", "index.js"]
+
+ENTRYPOINT ["node", "index.js"]
