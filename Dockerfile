@@ -4,5 +4,5 @@ WORKDIR /usr/app
 COPY . .
 RUN npm install
 ENV ENVIROMENT production
-ARS DEVOPS-LEVEL hard
+ARG DEVOPS-LEVEL hard
 CMD ["node", "index.js"]
